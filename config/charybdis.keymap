@@ -20,6 +20,7 @@
 
         // bindings = <&ib_toggle_layer 7>;
     };
+
     tb0_mmv_ibl {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
@@ -30,7 +31,6 @@
         bindings = <&ib_tog_layer 3>; // оце і є автоматика
         rotate-deg = <315>;
     };
-
 
     /* input config for snipe mode */
 
@@ -133,12 +133,12 @@
             >;
         };
 
-        SYM {
+        MOU {
             bindings = <
-&trans            &kp MINUS     &kp PLUS      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL       &kp EXCLAMATION  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp ASTERISK  &kp AMPERSAND         &kp AT
-&kp LS(LEFT_ALT)  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3          &kp NUMBER_4           &kp N5          &kp NUMBER_6     &kp N7            &kp N8             &kp N9        &kp N0                &kp HASH
-&trans            &bt BT_CLR    &bt BT_SEL 2  &kp SCROLLLOCK        &kp KP_NUMLOCK         &kp CAPSLOCK    &kp UNDERSCORE   &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp PERCENT   &kp NON_US_BACKSLASH  &kp DOLLAR
-                                              &trans                &mo 2                  &trans          &kp ENTER        &kp BSPC
+&trans  &trans  &trans  &trans     &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &mkp RCLK  &trans  &mkp LCLK    &trans  &trans
             >;
         };
     };
