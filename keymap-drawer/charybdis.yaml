@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: charybdis}
 layers:
   BASE:
-  - ESC
+  - {t: ▽, type: trans}
   - Q
   - W
   - E
@@ -12,7 +12,7 @@ layers:
   - I
   - O
   - P
-  - '['
+  - {t: ▽, type: trans}
   - TAB
   - A
   - {t: S, h: LEFT CONTROL}
@@ -25,7 +25,7 @@ layers:
   - {t: L, h: RCTRL}
   - ;
   - ''''
-  - LEFT WIN
+  - {t: ▽, type: trans}
   - Z
   - X
   - C
@@ -36,14 +36,14 @@ layers:
   - ','
   - .
   - /
-  - ']'
-  - NUM
-  - {t: SPACE, h: NAV}
+  - {t: ▽, type: trans}
+  - D
+  - {t: SPACE, h: NUM}
   - L CLK
   - RET
   - BACK SPACE
   NUM:
-  - PRINT SCREEN
+  - {t: ▽, type: trans}
   - '-'
   - +
   - (
@@ -55,7 +55,7 @@ layers:
   - '*'
   - '&'
   - '@'
-  - Sft+ LEFT ALT
+  - ZMK Studio
   - '1'
   - '2'
   - '3'
@@ -67,20 +67,20 @@ layers:
   - '9'
   - '0'
   - '#'
-  - Ctl+ LEFT WIN
-  - BT CLR
-  - {t: BT, h: '2'}
-  - SCROLLLOCK
+  - {t: ▽, type: trans}
+  - $
+  - '@'
+  - '|'
   - KP NUMLOCK
-  - CAPSLOCK
+  - PRINT SCREEN
   - _
   - '{'
   - '}'
   - '%'
   - \
   - $
-  - {type: held}
-  - NAV
+  - {t: ▽, type: trans}
+  - {t: NAV, type: held}
   - {t: ▽, type: trans}
   - ENTER
   - BSPC
@@ -127,7 +127,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   SYM:
-  - PRINT SCREEN
+  - {t: ▽, type: trans}
   - '-'
   - +
   - (
@@ -151,7 +151,7 @@ layers:
   - '9'
   - '0'
   - '#'
-  - Ctl+ LEFT WIN
+  - {t: ▽, type: trans}
   - BT CLR
   - {t: BT, h: '2'}
   - SCROLLLOCK
