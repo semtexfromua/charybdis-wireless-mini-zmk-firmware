@@ -54,8 +54,8 @@ layers:
   - ']'
   - '*'
   - '&'
-  - '@'
-  - ZMK Studio
+  - {t: ▽, type: trans}
+  - PRINT SCREEN
   - '1'
   - '2'
   - '3'
@@ -78,7 +78,7 @@ layers:
   - '}'
   - '%'
   - \
-  - $
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: SNUM, type: held}
   - {t: ▽, type: trans}
@@ -104,10 +104,10 @@ layers:
   - RIGHT
   - VOLUME UP
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - RIGHT SHIFT
+  - RIGHT ALT
+  - RCTRL
+  - LEFT WIN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
