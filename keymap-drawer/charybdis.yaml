@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: charybdis}
 layers:
-  BASE:
+  BAS:
   - {t: ▽, type: trans}
   - Q
   - W
@@ -37,12 +37,12 @@ layers:
   - .
   - /
   - {t: ▽, type: trans}
-  - {t: ESCAPE, h: NAVI}
-  - {t: SPACE, h: SNUM}
-  - MOUS
-  - {t: RET, h: CONF}
-  - {t: BACK SPACE, h: ADD1}
-  SNUM:
+  - {t: ESCAPE, h: NAV}
+  - {t: SPACE, h: NUM}
+  - MOU
+  - {t: RET, h: SET}
+  - {t: BACK SPACE, h: RES}
+  NUM:
   - {t: ▽, type: trans}
   - '-'
   - +
@@ -80,11 +80,11 @@ layers:
   - \
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: SNUM, type: held}
+  - {t: NUM, type: held}
   - {t: ▽, type: trans}
   - ENTER
   - BSPC
-  NAVI:
+  NAV:
   - {t: ▽, type: trans}
   - PAGE DOWN
   - HOME
@@ -121,12 +121,12 @@ layers:
   - {t: BT, h: '3'}
   - BT CLR
   - '&sys_reset'
-  - {t: NAVI, type: held}
+  - {t: NAV, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  MOUS:
+  MOU:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -165,10 +165,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: MOUS, type: held}
+  - {t: MOU, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  CONF:
+  SET:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -210,7 +210,7 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  ADD1:
+  RES:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
