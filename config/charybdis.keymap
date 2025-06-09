@@ -26,7 +26,7 @@
         y-input-code = <INPUT_REL_Y>;
         scale-multiplier = <1>;
         scale-divisor = <6>;
-        bindings = <&ib_toggle_layer 3>;
+        // bindings = <&ib_toggle_layer 3>;
     };
 
     /* input config for snipe mode */
@@ -82,10 +82,12 @@
     // ╰──────┴──────┴──────┼──────┼──────┼──────┤  ├──────┼──────┼──────┴──────┴──────┴──────╯
     //                         36     37     38        39     40
     //                      ╰──────┴──────┴──────╯  ╰──────┴──────╯
-    // #define BASE    0
-    // #define NUM     1
-    // #define NAV     2
-    // #define SYM     3
+    #define BASE    0
+    #define NUM     1
+    #define NAV     2
+    #define MOU     3
+    #define SET     4
+    #define ADD     5
 
     behaviors {
         left_ctrl_shift: left_ctrl_shift {
@@ -168,7 +170,7 @@
             >;
         };
 
-        NAVI {
+        NAV {
             display-name = "NAV";
             bindings = <
 &trans  &kp PAGE_DOWN  &kp HOME  &kp UP    &kp END    &kp PAGE_UP        &trans        &trans           &trans         &trans        &trans        &trans
@@ -178,7 +180,7 @@
             >;
         };
 
-        MOUS {
+        MOU {
             display-name = "MOU";
             bindings = <
 &trans  &trans  &trans     &trans     &trans     &trans    &trans  &trans           &trans         &trans     &trans        &trans
@@ -188,7 +190,7 @@
             >;
         };
 
-        CONF {
+        SET {
             display-name = "SET";
             bindings = <
 &trans      &trans        &trans        &bootloader   &sys_reset    &trans          &trans  &sys_reset      &bootloader  &trans  &trans  &trans
@@ -198,17 +200,8 @@
             >;
         };
 
-        ADD1 {
-            display-name = "RES";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans
-            >;
-        };
-
-        ADD2 {
+        ADD {
+            display-name = "ADD";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
