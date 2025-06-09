@@ -9,18 +9,6 @@
 #include "behaviors.dtsi"
 #include "combos.dtsi"
 
-behaviors {
-        homerow: homerow {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-        };
-    };
 
 / {
     /* input config for mouse move mode */
@@ -93,6 +81,19 @@ behaviors {
 // #define MOUSE   7
 // #define SLOW    8
 // #define SCROLL  9
+behaviors {
+        homerow: homerow {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+        };
+    };
+
 
     keymap {
         compatible = "zmk,keymap";
