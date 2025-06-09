@@ -5,6 +5,15 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+&lt {
+    tapping-term-ms = <175>;
+    quick-tap-ms = <100>;
+    require-prior-idle-ms = <75>;
+    flavor = "balanced";
+    hold-trigger-key-positions = <37 36 39 40>;
+    hold-trigger-on-release;
+};
+
 / {
     /* input config for mouse move mode */
 
@@ -86,8 +95,11 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
+            quick-tap-ms = <100>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <16 15 14 13 19 20 21 22>;
+            require-prior-idle-ms = <75>;
+            hold-trigger-on-release;
         };
     };
 
@@ -96,23 +108,23 @@
 
         BASE {
             bindings = <
-&trans   &kp Q  &kp W                    &kp E  &kp R                  &kp T        &kp Y    &kp U                   &kp I      &kp O             &kp P     &trans
-&kp TAB  &kp A  &homerow LEFT_CONTROL S  &kp D  &homerow LEFT_SHIFT F  &kp G        &kp H    &homerow RIGHT_SHIFT J  &kp K      &homerow RCTRL L  &kp SEMI  &kp SQT
-&trans   &kp Z  &kp X                    &kp C  &kp V                  &kp B        &kp N    &kp M                   &kp COMMA  &kp DOT           &kp FSLH  &trans
-                                         &kp D  &lt 1 SPACE            &mkp LCLK    &kp RET  &kp BACKSPACE
+&trans   &kp Q                &kp W                    &kp E                &kp R                  &kp T        &kp Y      &kp U                   &kp I                 &kp O             &kp P                    &trans
+&kp TAB  &homerow LEFT_GUI A  &homerow LEFT_CONTROL S  &homerow LEFT_ALT D  &homerow LEFT_SHIFT F  &kp G        &kp H      &homerow RIGHT_SHIFT J  &homerow RIGHT_ALT K  &homerow RCTRL L  &homerow RIGHT_GUI SEMI  &kp SQT
+&trans   &kp Z                &kp X                    &kp C                &kp V                  &kp B        &kp N      &kp M                   &kp COMMA             &kp DOT           &kp FSLH                 &trans
+                                                       &lt 2 ESCAPE         &lt 1 SPACE            &mkp LCLK    &lt 4 RET  &lt 5 BACKSPACE
             >;
         };
 
-        NUM {
+        SNUM {
             bindings = <
 &trans          &kp MINUS     &kp PLUS      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL          &kp EXCLAMATION  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp ASTERISK  &kp AMPERSAND         &kp AT
 &studio_unlock  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3          &kp NUMBER_4           &kp N5             &kp NUMBER_6     &kp N7            &kp N8             &kp N9        &kp N0                &kp HASH
 &trans          &kp DOLLAR    &kp AT_SIGN   &kp PIPE              &kp KP_NUMLOCK         &kp PRINTSCREEN    &kp UNDERSCORE   &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp PERCENT   &kp NON_US_BACKSLASH  &kp DOLLAR
-                                            &trans                &mo 2                  &trans             &kp ENTER        &kp BSPC
+                                            &trans                &mo 1                  &trans             &kp ENTER        &kp BSPC
             >;
         };
 
-        NAV {
+        NAVI {
             bindings = <
 &trans  &kp PAGE_DOWN  &kp HOME  &kp UP    &kp END    &kp PAGE_UP        &trans        &trans        &trans        &trans        &trans      &trans
 &trans  &kp C_VOL_DN   &kp LEFT  &kp DOWN  &kp RIGHT  &kp C_VOLUME_UP    &trans        &trans        &trans        &trans        &trans      &trans
@@ -121,12 +133,39 @@
             >;
         };
 
-        MOU {
+        MOUS {
             bindings = <
 &trans  &trans  &trans  &trans     &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans     &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans     &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
                         &mkp RCLK  &trans  &mkp LCLK    &trans  &trans
+            >;
+        };
+
+        CONF {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans
+            >;
+        };
+
+        ADD1 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans
+            >;
+        };
+
+        ADD2 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans
             >;
         };
     };
