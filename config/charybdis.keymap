@@ -51,7 +51,6 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_MISC>;
         y-input-code = <INPUT_REL_WHEEL>;
-        y-invert;
         scale-divisor = <8>;
         bindings = <&ib_wheel_scaler 1>;
     };
@@ -93,8 +92,8 @@
     arrow_x_rotate: arrow_x_rotate {
         compatible = "zmk,behavior-sensor-rotate";
         #binding-cells = <1>;
-        bindings-cw = <&kp KC_RIGHT>;
-        bindings-ccw = <&kp KC_LEFT>;
+        bindings-cw = <16>;
+        bindings-ccw = <14>;
         tap-ms = <40>;
         wait-ms = <0>;
         release-ms = <0>;
@@ -103,8 +102,8 @@
     arrow_y_rotate: arrow_y_rotate {
         compatible = "zmk,behavior-sensor-rotate";
         #binding-cells = <1>;
-        bindings-cw = <&kp KC_DOWN>;
-        bindings-ccw = <&kp KC_UP>;
+        bindings-cw = <15>;
+        bindings-ccw = <03>;
         tap-ms = <40>;
         wait-ms = <0>;
         release-ms = <0>;
