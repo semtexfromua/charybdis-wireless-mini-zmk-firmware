@@ -83,6 +83,7 @@
         #binding-cells = <1>;
         time-to-live-ms = <500>;
     };
+
     ib_move_to_arrow: ib_move_to_arrow {
         compatible = "zmk,input-behavior-sensor-rotate";
         #binding-cells = <0>;
