@@ -205,8 +205,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Mid CLK
   - R CLK
+  - {t: ▽, type: trans}
   - {t: L CLK, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
