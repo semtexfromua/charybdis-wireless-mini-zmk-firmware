@@ -60,7 +60,7 @@
         layers = <2>;  // активується тільки в шарі NAV
         evt-type = <INPUT_EV_REL>;
         input-code = <INPUT_REL_X>;
-        bindings = <&arrow_x_rotate 0>;
+        bindings = <&arrow_x_rotate 16 14>;
     };
     
     trackball_arrow_y {
@@ -69,7 +69,7 @@
         layers = <2>;
         evt-type = <INPUT_EV_REL>;
         input-code = <INPUT_REL_Y>;
-        bindings = <&arrow_y_rotate 0>;
+        bindings = <&arrow_y_rotate 15 3>;
     };
 
 
@@ -93,7 +93,7 @@
     arrow_x_rotate: arrow_x_rotate {
         compatible = "zmk,behavior-sensor-rotate-var";
         #sensor-binding-cells = <2>;
-        bindings = <&kp 16>, <&kp 14>;
+        bindings = <&kp>, <&kp>;
         tap-ms = <40>;
         wait-ms = <0>;
         release-ms = <0>;
@@ -102,7 +102,7 @@
     arrow_y_rotate: arrow_y_rotate {
         compatible = "zmk,behavior-sensor-rotate-var";
         #sensor-binding-cells = <2>;
-        bindings = <&kp 15>, <&kp 3>;
+        bindings = <&kp>, <&kp>;
         tap-ms = <40>;
         wait-ms = <0>;
         release-ms = <0>;
