@@ -93,7 +93,7 @@
     arrow_x_rotate: arrow_x_rotate {
         compatible = "zmk,behavior-sensor-rotate-var";
         #sensor-binding-cells = <2>;
-        bindings = <&kp 14>, <&kp 16>;
+        bindings = <&kp>, <&kp>;
         tap-ms = <40>;
         wait-ms = <0>;
         release-ms = <0>;
@@ -102,7 +102,7 @@
     arrow_y_rotate: arrow_y_rotate {
         compatible = "zmk,behavior-sensor-rotate-var";
         #sensor-binding-cells = <2>;
-        bindings = <&kp 15>, <&kp 3>;
+        bindings = <&kp>, <&kp>;
         tap-ms = <40>;
         wait-ms = <0>;
         release-ms = <0>;
@@ -228,6 +228,8 @@
 &trans  &trans         &trans    &trans    &trans     &trans             &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_CLR    &sys_reset
                                  &mo 2     &trans     &trans             &trans        &trans
             >;
+        sensor-bindings = <&arrow_y_rotate UP DOWN>, <&arrow_x_rotate LEFT RIGHT>;
+
         };
 
         CAD {
