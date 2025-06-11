@@ -58,7 +58,7 @@
     trackball_arrow_x {
         compatible = "zmk,input-listener";
         device = <&vtrackball>;
-        layers = <4>;  // активується тільки в шарі MOU
+        layers = <2>;  // активується тільки в шарі MOU
         evt-type = <INPUT_EV_REL>;
         input-code = <INPUT_REL_X>;
         bindings = <&arrow_x_rotate 0>;
@@ -67,7 +67,7 @@
     trackball_arrow_y {
         compatible = "zmk,input-listener";
         device = <&vtrackball>;
-        layers = <4>;
+        layers = <2>;
         evt-type = <INPUT_EV_REL>;
         input-code = <INPUT_REL_Y>;
         bindings = <&arrow_y_rotate 0>;
