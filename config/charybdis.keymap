@@ -89,11 +89,11 @@
         #binding-cells = <1>;
         time-to-live-ms = <500>;
     };
+
     arrow_x_rotate: arrow_x_rotate {
         compatible = "zmk,behavior-sensor-rotate";
-        #binding-cells = <1>;
-        bindings-cw = <&kp 16>;
-        bindings-ccw = <&kp 14>;
+        #sensor-binding-cells = <0>;
+        bindings = <&kp 16>, <&kp 14>;
         tap-ms = <40>;
         wait-ms = <0>;
         release-ms = <0>;
@@ -101,13 +101,13 @@
     
     arrow_y_rotate: arrow_y_rotate {
         compatible = "zmk,behavior-sensor-rotate";
-        #binding-cells = <1>;
-        bindings-cw = <&kp 15>;
-        bindings-ccw = <&kp 3>;
+        #sensor-binding-cells = <0>;
+        bindings = <&kp 15>, <&kp 3>;
         tap-ms = <40>;
         wait-ms = <0>;
         release-ms = <0>;
     };
+
 
 
     // ╭──────┬──────┬──────┬──────┬──────┬──────╮  ╭──────┬──────┬──────┬──────┬──────┬──────╮
