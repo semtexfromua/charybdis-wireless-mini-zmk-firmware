@@ -61,7 +61,7 @@
         layers = <2>;  // активується тільки в шарі NAV
         evt-type = <INPUT_EV_REL>;
         input-code = <INPUT_REL_X>;
-        bindings = <&arrow_x_rotate>;
+        bindings = <&testrot>;
     };
 
     trackball_arrow_y {
@@ -70,7 +70,7 @@
         layers = <2>;
         evt-type = <INPUT_EV_REL>;
         input-code = <INPUT_REL_Y>;
-        bindings = <&arrow_y_rotate>;
+        bindings = <&testrot>;
     };
 
     /* define a resolution down scaler only for INPUT_REL_WHEEL */
