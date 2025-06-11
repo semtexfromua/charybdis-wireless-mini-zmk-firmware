@@ -54,6 +54,18 @@
         scale-divisor = <8>;
         bindings = <&ib_wheel_scaler 1 14>;
     };
+    
+    trackball_arrow_listener {
+        compatible = "zmk,input-behavior-listener";
+        device = <&vtrackball>;
+        layers = <2>; // Працює тільки на шарі 2
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
+        scale-divisor = <1>; // Без масштабування
+        scale-divisor = <8>;
+        bindings = <&ib_move_to_arrow>; // Використовуємо наш новий behavior
+    };
 
     /* define a resolution down scaler only for INPUT_REL_WHEEL */
 
@@ -70,6 +82,14 @@
         compatible = "zmk,input-behavior-tog-layer";
         #binding-cells = <1>;
         time-to-live-ms = <500>;
+    };
+    ib_move_to_arrow: ib_move_to_arrow {
+        compatible = "zmk,input-behavior-sensor-rotate";
+        #sensor-binding-cells = <4>;
+        threshold = <30>; // Поріг чутливості - 30 пікселів
+        // x-invert; // Розкоментувати для інверсії X
+        // y-invert; // Розкоментувати для інверсії Y
+        bindings = <&kp RIGHT>, <&kp LEFT>, <&kp UP>, <&kp DOWN>;
     };
 
     // ╭──────┬──────┬──────┬──────┬──────┬──────╮  ╭──────┬──────┬──────┬──────┬──────┬──────╮
