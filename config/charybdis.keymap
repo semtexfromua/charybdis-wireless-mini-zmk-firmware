@@ -54,6 +54,7 @@
         scale-divisor = <8>;
         bindings = <&ib_wheel_scaler 1 14>;
     };
+
     trackball_arrow_x {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
@@ -62,7 +63,7 @@
         input-code = <INPUT_REL_X>;
         bindings = <&arrow_x_rotate>;
     };
-    
+
     trackball_arrow_y {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
@@ -71,7 +72,6 @@
         input-code = <INPUT_REL_Y>;
         bindings = <&arrow_y_rotate>;
     };
-
 
     /* define a resolution down scaler only for INPUT_REL_WHEEL */
 
@@ -89,20 +89,6 @@
         #binding-cells = <1>;
         time-to-live-ms = <500>;
     };
-
-    arrow_x_rotate: arrow_x_rotate {
-        compatible = "zmk,behavior-sensor-rotate-var";
-        #sensor-binding-cells = <2>;
-        bindings = <&kp>, <&kp>;
-    };
-    
-    arrow_y_rotate: arrow_y_rotate {
-        compatible = "zmk,behavior-sensor-rotate-var";
-        #sensor-binding-cells = <2>;
-        bindings = <&kp>, <&kp>;
-    };
-
-
 
     // ╭──────┬──────┬──────┬──────┬──────┬──────╮  ╭──────┬──────┬──────┬──────┬──────┬──────╮
     //    00     01     02     03    04      05        06     07     08     09     10     11
@@ -177,6 +163,15 @@
             hold-trigger-on-release;
             hold-trigger-key-positions = <20 22>;
         };
+
+        testrot: testrot {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            label = "TESTROT";
+            #sensor-binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+
+            tap-ms = <100>;
+        };
     };
 
     combos {
@@ -222,8 +217,8 @@
 &trans  &trans         &trans    &trans    &trans     &trans             &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_CLR    &sys_reset
                                  &mo 2     &trans     &trans             &trans        &trans
             >;
-        sensor-bindings = <&arrow_y_rotate UP DOWN>, <&arrow_x_rotate LEFT RIGHT>;
 
+            sensor-bindings = <&none>, <&none>;
         };
 
         CAD {
