@@ -87,7 +87,7 @@
     ib_move_to_arrow: ib_move_to_arrow {
         compatible = "zmk,input-behavior-move-to-keypress";
         #binding-cells = <0>;
-        threshold = <30>; // Поріг чутливості - 300 пікселів
+        threshold = <50>; // Поріг чутливості - 300 пікселів
         rate-limit-ms = <50>; // Мінімум 50мс між подіями (20 подій/сек)
         // x-invert; // Розкоментувати для інверсії X
         // y-invert; // Розкоментувати для інверсії Y
