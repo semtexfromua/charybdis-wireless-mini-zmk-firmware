@@ -26,6 +26,7 @@
         y-input-code = <INPUT_REL_Y>;
         scale-multiplier = <1>;
         scale-divisor = <6>;
+
         // bindings = <&ib_toggle_layer 3>;
     };
 
@@ -82,6 +83,7 @@
     // ╰──────┴──────┴──────┼──────┼──────┼──────┤  ├──────┼──────┼──────┴──────┴──────┴──────╯
     //                         36     37     38        39     40
     //                      ╰──────┴──────┴──────╯  ╰──────┴──────╯
+
     #define BASE    0
     #define NUM     1
     #define NAV     2
@@ -183,10 +185,10 @@
         MOU {
             display-name = "MOU";
             bindings = <
-&trans  &trans  &trans     &trans     &trans     &trans    &trans  &trans           &trans         &trans     &trans        &trans
-&trans  &trans  &mkp MCLK  &mkp RCLK  &mkp LCLK  &trans    &trans  &kp RIGHT_SHIFT  &kp RIGHT_ALT  &kp RCTRL  &kp LEFT_WIN  &trans
-&trans  &trans  &trans     &trans     &trans     &trans    &trans  &trans           &trans         &trans     &trans        &trans
-                           &trans     &trans     &mo 3     &trans  &trans
+&trans  &trans  &trans  &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &mkp MCLK  &mkp RCLK  &mkp LCLK    &trans  &trans
             >;
         };
 
