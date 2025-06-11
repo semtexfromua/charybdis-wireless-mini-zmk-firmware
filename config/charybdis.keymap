@@ -86,9 +86,9 @@
     #define BASE    0
     #define NUM     1
     #define NAV     2
-    #define MOU     3
-    #define SET     4
-    #define ADD     5
+    #define CAD     3
+    #define MOU     4
+    #define SET     5
 
     behaviors {
         left_ctrl_shift: left_ctrl_shift {
