@@ -41,7 +41,7 @@ layers:
   - {t: SPACE, h: NUM}
   - MOU
   - {t: RET, h: SET}
-  - {t: BACK SPACE, h: CAD}
+  - BACK SPACE
   NUM:
   - {t: ▽, type: trans}
   - '-'
@@ -167,7 +167,7 @@ layers:
   - R CLK
   - L CLK
   - ENTER
-  - {t: BACK SPACE, type: held}
+  - BACK SPACE
   MOU:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -252,3 +252,7 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
+combos:
+- p: [12, 23]
+  k: {t: CAD, h: toggle}
+  l: [BAS, CAD]
