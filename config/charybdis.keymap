@@ -92,8 +92,8 @@
     arrow_x_rotate: arrow_x_rotate {
         compatible = "zmk,behavior-sensor-rotate";
         #binding-cells = <1>;
-        bindings-cw = <16>;
-        bindings-ccw = <14>;
+        bindings-cw = <&kp 16>;
+        bindings-ccw = <&kp 14>;
         tap-ms = <40>;
         wait-ms = <0>;
         release-ms = <0>;
@@ -102,8 +102,8 @@
     arrow_y_rotate: arrow_y_rotate {
         compatible = "zmk,behavior-sensor-rotate";
         #binding-cells = <1>;
-        bindings-cw = <15>;
-        bindings-ccw = <03>;
+        bindings-cw = <&kp 15>;
+        bindings-ccw = <&kp 3>;
         tap-ms = <40>;
         wait-ms = <0>;
         release-ms = <0>;
