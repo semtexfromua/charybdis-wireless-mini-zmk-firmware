@@ -61,10 +61,10 @@
         layers = <2>; // Працює тільки на шарі 2
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
+        y-input-code = <INPUT_REL_X>;
         scale-multiplier = <1>;
         scale-divisor = <8>;
-        bindings = <&ib_move_to_arrow>; // Використовуємо наш новий behavior
+        bindings = <&ib_x_nav>; // Використовуємо наш новий behavior
     };
 
     /* define a resolution down scaler only for INPUT_REL_WHEEL */
@@ -84,12 +84,13 @@
         time-to-live-ms = <500>;
     };
 
-    ib_move_to_arrow: ib_move_to_arrow {
+    ib_x_nav: ib_x_nav {
         compatible = "zmk,input-behavior-move-to-keypress";
         #binding-cells = <0>;
-        threshold = <50>; // Поріг чутливості - 300 пікселів
-        rate-limit-ms = <50>;
-        bindings = <&kp RIGHT>, <&kp LEFT>, <&kp UP>, <&kp DOWN>;
+        evt-type = <INPUT_EV_REL>;
+        input-code = <INPUT_REL_X>;
+        threshold = <300>;
+        bindings = <&kp RIGHT>, <&kp LEFT>;  // Right for positive, Left for negative
     };
 
     // ╭──────┬──────┬──────┬──────┬──────┬──────╮  ╭──────┬──────┬──────┬──────┬──────┬──────╮
