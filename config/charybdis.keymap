@@ -26,7 +26,7 @@
         y-input-code = <INPUT_REL_Y>;
         scale-multiplier = <1>;
         scale-divisor = <6>;
-        bindings = <&ib_toggle_layer 3>;
+        bindings = <&ib_toggle_layer 4>;
     };
 
     /* input config for snipe mode */
@@ -53,7 +53,7 @@
         y-input-code = <INPUT_REL_WHEEL>;
         y-invert;
         scale-divisor = <8>;
-        bindings = <&ib_wheel_scaler 1 14>;
+        bindings = <&ib_wheel_scaler 1>;
     };
 
     /* define a resolution down scaler only for INPUT_REL_WHEEL */
