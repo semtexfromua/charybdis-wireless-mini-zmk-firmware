@@ -55,16 +55,16 @@
         bindings = <&ib_wheel_scaler 1 14>;
     };
     trackball_arrow_x {
-        compatible = "zmk,input-listener";
+        compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <2>;  // активується тільки в шарі MOU
+        layers = <2>;  // активується тільки в шарі NAV
         evt-type = <INPUT_EV_REL>;
         input-code = <INPUT_REL_X>;
         bindings = <&arrow_x_rotate 0>;
     };
     
     trackball_arrow_y {
-        compatible = "zmk,input-listener";
+        compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
         layers = <2>;
         evt-type = <INPUT_EV_REL>;
