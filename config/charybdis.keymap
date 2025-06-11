@@ -52,7 +52,7 @@
         x-input-code = <INPUT_REL_MISC>;
         y-input-code = <INPUT_REL_WHEEL>;
         scale-divisor = <8>;
-        bindings = <&ib_wheel_scaler 1>;
+        bindings = <&ib_wheel_scaler 1 14>;
     };
     trackball_arrow_x {
         compatible = "zmk,input-listener";
