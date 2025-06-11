@@ -15,6 +15,7 @@
     hold-trigger-on-release;
 };
 
+
 / {
     /* input config for mouse move mode */
 
