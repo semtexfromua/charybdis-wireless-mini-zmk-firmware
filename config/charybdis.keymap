@@ -62,7 +62,7 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
-        scale-divisor = <1>; // Без масштабування
+        scale-multiplier = <1>;
         scale-divisor = <8>;
         bindings = <&ib_move_to_arrow>; // Використовуємо наш новий behavior
     };
