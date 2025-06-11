@@ -85,10 +85,10 @@
     };
     ib_move_to_arrow: ib_move_to_arrow {
         compatible = "zmk,input-behavior-sensor-rotate";
-        #sensor-binding-cells = <4>;
-        threshold = <30>; // Поріг чутливості - 30 пікселів
-        // x-invert; // Розкоментувати для інверсії X
-        // y-invert; // Розкоментувати для інверсії Y
+        #binding-cells = <0>;
+        threshold = <30>; // Поріг чутливості
+        // x-invert; // Інверсія X (розкоментувати при потребі)
+        // y-invert; // Інверсія Y (розкоментувати при потребі)
         bindings = <&kp RIGHT>, <&kp LEFT>, <&kp UP>, <&kp DOWN>;
     };
 
