@@ -94,18 +94,12 @@
         compatible = "zmk,behavior-sensor-rotate-var";
         #sensor-binding-cells = <2>;
         bindings = <&kp>, <&kp>;
-        tap-ms = <40>;
-        wait-ms = <0>;
-        release-ms = <0>;
     };
     
     arrow_y_rotate: arrow_y_rotate {
         compatible = "zmk,behavior-sensor-rotate-var";
         #sensor-binding-cells = <2>;
         bindings = <&kp>, <&kp>;
-        tap-ms = <40>;
-        wait-ms = <0>;
-        release-ms = <0>;
     };
 
 
