@@ -55,24 +55,6 @@
         bindings = <&ib_wheel_scaler 1 14>;
     };
 
-    trackball_arrow_x {
-        compatible = "zmk,input-behavior-listener";
-        device = <&vtrackball>;
-        layers = <2>;  // активується тільки в шарі NAV
-        evt-type = <INPUT_EV_REL>;
-        input-code = <INPUT_REL_X>;
-        bindings = <&testrot>;
-    };
-
-    trackball_arrow_y {
-        compatible = "zmk,input-behavior-listener";
-        device = <&vtrackball>;
-        layers = <2>;
-        evt-type = <INPUT_EV_REL>;
-        input-code = <INPUT_REL_Y>;
-        bindings = <&testrot>;
-    };
-
     /* define a resolution down scaler only for INPUT_REL_WHEEL */
 
     ib_wheel_scaler: ib_wheel_scaler {
@@ -163,15 +145,6 @@
             hold-trigger-on-release;
             hold-trigger-key-positions = <20 22>;
         };
-
-        testrot: testrot {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            label = "TESTROT";
-            #sensor-binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-
-            tap-ms = <100>;
-        };
     };
 
     combos {
@@ -217,8 +190,6 @@
 &trans  &trans         &trans    &trans    &trans     &trans             &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_CLR    &sys_reset
                                  &mo 2     &trans     &trans             &trans        &trans
             >;
-
-            sensor-bindings = <&none>, <&none>;
         };
 
         CAD {
