@@ -26,7 +26,7 @@
         y-input-code = <INPUT_REL_Y>;
         scale-multiplier = <1>;
         scale-divisor = <6>;
-        bindings = <&ib_toggle_layer 4>;
+        // bindings = <&ib_toggle_layer 4>;
     };
 
     /* input config for snipe mode */
@@ -168,45 +168,36 @@
             hold-trigger-on-release;
             hold-trigger-key-positions = <20 22>;
         };
-
-        // 1. morph_ctrl: нічого -> ЛКМ, CTRL -> CTRL+ЛКМ
-
+            // 1. morph_ctrl: нічого -> ЛКМ, CTRL -> CTRL+ЛКМ
         morph_ctrl: morph_ctrl {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&mkp BTN1>, <&kp LC( BTN1 )>;
-
+            bindings = <&mkp LCLK>, <&kp LC(LCLK)>;
             mods = <MOD_LCTL>;
         };
-
+    
         // 2. morph_alt: morph_ctrl -> без ALT, ALT -> ALT+ЛКМ
-
         morph_alt: morph_alt {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&morph_ctrl>, <&kp LA( BTN1 )>;
-
+            bindings = <&morph_ctrl>, <&kp LA(LCLK)>;
             mods = <MOD_LALT>;
             label = "MORPH_ALT";
         };
-
+    
         // 3. morph_shift: morph_alt -> без SHIFT, SHIFT -> ПКМ
-
         morph_shift: morph_shift {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&morph_alt>, <&mkp BTN2>;
-
+            bindings = <&morph_alt>, <&mkp RCLK>;
             mods = <MOD_LSFT>;
         };
-
-        // 4. morph_gui: morph_shift -> без GUI, GUI -> ЦКМ
-
+    
+        // 4. smart_mouse: morph_shift -> без GUI, GUI -> ЦКМ
         smart_mouse: smart_mouse {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&morph_shift>, <&mkp BTN3>;
-
+            bindings = <&morph_shift>, <&mkp MCLK>;
             mods = <MOD_LGUI>;
         };
     };
