@@ -168,32 +168,31 @@
             hold-trigger-on-release;
             hold-trigger-key-positions = <20 22>;
         };
-            // 1. morph_ctrl: нічого -> ЛКМ, CTRL -> CTRL+ЛКМ
+        // Крок 1: нічого -> ЛКМ, CTRL -> CTRL+ЛКМ
         morph_ctrl: morph_ctrl {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&mkp LCLK>, <&kp LC(LCLK)>;
+            bindings = <&mkp LCLK>, <&ctrl_lclk>;
             mods = <MOD_LCTL>;
         };
-    
-        // 2. morph_alt: morph_ctrl -> без ALT, ALT -> ALT+ЛКМ
+        
+        // Крок 2: без ALT -> morph_ctrl, ALT -> ALT+ЛКМ  
         morph_alt: morph_alt {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&morph_ctrl>, <&kp LA(LCLK)>;
+            bindings = <&morph_ctrl>, <&alt_lclk>;
             mods = <MOD_LALT>;
-            label = "MORPH_ALT";
         };
-    
-        // 3. morph_shift: morph_alt -> без SHIFT, SHIFT -> ПКМ
+        
+        // Крок 3: без SHIFT -> morph_alt, SHIFT -> ПКМ
         morph_shift: morph_shift {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&morph_alt>, <&mkp RCLK>;
             mods = <MOD_LSFT>;
         };
-    
-        // 4. smart_mouse: morph_shift -> без GUI, GUI -> ЦКМ
+        
+        // Крок 4: без WIN -> morph_shift, WIN -> ЦКМ
         smart_mouse: smart_mouse {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -211,6 +210,23 @@
             layers = <0 3>;
             require-prior-idle-ms = <25>;
             timeout-ms = <100>;
+        };
+    };
+    macros {
+        alt_lclk: alt_lclk {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LALT &mkp LCLK>,
+                      <&macro_pause_for_release>,
+                      <&macro_release &kp LALT &mkp LCLK>;
+        };
+        
+        ctrl_lclk: ctrl_lclk {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LCTRL &mkp LCLK>,
+                      <&macro_pause_for_release>,
+                      <&macro_release &kp LCTRL &mkp LCLK>;
         };
     };
 
