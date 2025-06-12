@@ -256,3 +256,13 @@ combos:
 - p: [12, 23]
   k: {t: CAD, h: toggle}
   l: [BAS, CAD]
+- p: [16, 38]
+  k: R CLK
+  l: [BAS]
+- p: [38, 13]
+  k: Mid CLK
+  l: [BAS]
+- p: [19, 20, 36]
+  k: Sft+Ctl+ ESCAPE
+- p: [14, 15, 40]
+  k: Alt+Ctl+ DELETE

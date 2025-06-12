@@ -196,6 +196,32 @@
             require-prior-idle-ms = <25>;
             timeout-ms = <100>;
         };
+
+        RMC {
+            bindings = <&mkp RCLK>;
+            key-positions = <16 38>;
+            timeout-ms = <100>;
+            require-prior-idle-ms = <25>;
+            layers = <0>;
+        };
+
+        MMC {
+            bindings = <&mkp MCLK>;
+            key-positions = <38 13>;
+            timeout-ms = <100>;
+            require-prior-idle-ms = <25>;
+            layers = <0>;
+        };
+
+        ctrl+shift+esc {
+            bindings = <&kp RS(RC(ESCAPE))>;
+            key-positions = <19 20 36>;
+        };
+
+        ctrl+alt+del {
+            bindings = <&kp LA(LC(DELETE))>;
+            key-positions = <14 15 40>;
+        };
     };
 
     keymap {
