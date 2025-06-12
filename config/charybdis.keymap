@@ -93,6 +93,7 @@
         x-threshold = <70>;
         y-threshold = <200>;
         rate-limit-ms = <15>;
+        reset-other-axis; 
         bindings = <&kp RIGHT>, <&kp LEFT>, <&kp UP>, <&kp DOWN>;
     };
 
