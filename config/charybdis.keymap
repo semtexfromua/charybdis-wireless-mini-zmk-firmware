@@ -89,10 +89,10 @@
     ib_arrow_nav: ib_arrow_nav {
         compatible = "zmk,input-behavior-move-to-keypress";
         #binding-cells = <0>;
-        threshold = <50>;
-        x-threshold = <10>;
-        y-threshold = <200>;
-        rate-limit-ms = <10>;
+        threshold = <100>;
+        x-threshold = <100>;
+        y-threshold = <300>;
+        rate-limit-ms = <25>;
         bindings = <&kp RIGHT>, <&kp LEFT>, <&kp UP>, <&kp DOWN>;
     };
 
