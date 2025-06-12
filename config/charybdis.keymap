@@ -5,7 +5,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-
 &lt {
     tapping-term-ms = <150>;
     quick-tap-ms = <100>;
@@ -55,7 +54,7 @@
         scale-divisor = <8>;
         bindings = <&ib_wheel_scaler 1 14>;
     };
-    
+
     trackball_arrow_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
@@ -92,7 +91,7 @@
         x-threshold = <100>;
         y-threshold = <200>;
         rate-limit-ms = <15>;
-        reset-other-axis; 
+        reset-other-axis;
         bindings = <&kp RIGHT>, <&kp LEFT>, <&kp UP>, <&kp DOWN>;
     };
 
@@ -168,6 +167,15 @@
             require-prior-idle-ms = <90>;
             hold-trigger-on-release;
             hold-trigger-key-positions = <20 22>;
+        };
+
+        smart_mouse: smart_mouse {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SMART_MOUSE";
+            bindings = <&kp A>, <&kp B>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
         };
     };
 
