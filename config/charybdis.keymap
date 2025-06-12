@@ -207,7 +207,7 @@
 
         MMC {
             bindings = <&mkp MCLK>;
-            key-positions = <38 13>;
+            key-positions = <38 15>;
             timeout-ms = <100>;
             require-prior-idle-ms = <25>;
             layers = <0>;

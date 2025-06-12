@@ -259,7 +259,7 @@ combos:
 - p: [16, 38]
   k: R CLK
   l: [BAS]
-- p: [38, 13]
+- p: [38, 15]
   k: Mid CLK
   l: [BAS]
 - p: [19, 20, 36]
