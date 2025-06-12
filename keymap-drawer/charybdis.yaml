@@ -39,7 +39,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ESCAPE, h: NAV}
   - {t: SPACE, h: NUM}
-  - {t: L CLK, s: Mid CLK}
+  - ''
   - {t: RET, h: SET}
   - BACK SPACE
   NUM:
