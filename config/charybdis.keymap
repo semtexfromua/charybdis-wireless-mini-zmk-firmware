@@ -145,6 +145,15 @@
             hold-trigger-on-release;
             hold-trigger-key-positions = <20 22>;
         };
+
+        smart_mouse: smart_mouse {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SMART_MOUSE";
+            bindings = <&kp A>, <&kp B>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
     };
 
     combos {
