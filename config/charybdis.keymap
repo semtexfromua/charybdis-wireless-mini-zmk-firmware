@@ -89,10 +89,10 @@
     ib_arrow_nav: ib_arrow_nav {
         compatible = "zmk,input-behavior-move-to-keypress";
         #binding-cells = <0>;
-        threshold = <60>;
+        threshold = <20>;
+        // x-threshold = <80>;
+        y-threshold = <80>;
         rate-limit-ms = <50>;
-        // x-invert;  // Розкоментуйте якщо потрібно інвертувати X
-        // y-invert;  // Розкоментуйте якщо потрібно інвертувати Y
         bindings = <&kp RIGHT>, <&kp LEFT>, <&kp UP>, <&kp DOWN>;
     };
 
