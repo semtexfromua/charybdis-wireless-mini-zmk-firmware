@@ -49,7 +49,7 @@
         device = <&vtrackball>;
         layers = <1>;
         evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_HWHEEL>;
+        x-input-code = <INPUT_REL_MISC>;
         y-input-code = <INPUT_REL_WHEEL>;
         scale-divisor = <8>;
         bindings = <&ib_wheel_scaler 1 14>;
@@ -169,13 +169,36 @@
             hold-trigger-key-positions = <20 22>;
         };
 
-        smart_mouse: smart_mouse {
+        // 1. morph_ctrl: нічого -> ЛКМ, CTRL -> CTRL+ЛКМ
+        morph_ctrl {
             compatible = "zmk,behavior-mod-morph";
-            label = "SMART_MOUSE";
-            bindings = <&kp A>, <&kp B>;
-
             #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
+            bindings = <&mkp BTN1>, <&kp LC( BTN1 )>;
+            mods = <MOD_LCTL>;
+        };
+
+        // 2. morph_alt: morph_ctrl -> без ALT, ALT -> ALT+ЛКМ
+        morph_alt {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&morph_ctrl>, <&kp LA( BTN1 )>;
+            mods = <MOD_LALT>;
+        };
+
+        // 3. morph_shift: morph_alt -> без SHIFT, SHIFT -> ПКМ
+        morph_shift {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&morph_alt>, <&mkp BTN2>;
+            mods = <MOD_LSFT>;
+        };
+
+        // 4. morph_gui: morph_shift -> без GUI, GUI -> ЦКМ
+        smart_mouse {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&morph_shift>, <&mkp BTN3>;
+            mods = <MOD_LGUI>;
         };
     };
 
