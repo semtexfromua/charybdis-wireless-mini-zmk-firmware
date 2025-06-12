@@ -15,14 +15,14 @@ layers:
   - {t: ▽, type: trans}
   - TAB
   - {t: A, h: LEFT GUI}
-  - {t: S, h: LEFT CONTROL}
-  - {t: D, h: LEFT ALT}
+  - {t: S, h: LEFT ALT}
+  - {t: D, h: LCTRL}
   - {t: F, h: LEFT SHIFT}
   - G
   - H
   - {t: J, h: RIGHT SHIFT}
-  - {t: K, h: RIGHT ALT}
-  - {t: L, h: RCTRL}
+  - {t: K, h: RCTRL}
+  - {t: L, h: RIGHT ALT}
   - {t: ;, h: RIGHT GUI}
   - ''''
   - {t: ▽, type: trans}
@@ -39,9 +39,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ESCAPE, h: NAV}
   - {t: SPACE, h: NUM}
-  - ''
+  - L CLK
   - {t: RET, h: SET}
-  - BACK SPACE
+  - {t: BACK SPACE, s: DELETE}
   NUM:
   - {t: ▽, type: trans}
   - '-'
@@ -88,9 +88,8 @@ layers:
   - {t: ▽, type: trans}
   - PAGE DOWN
   - HOME
-  - UP
   - END
-  - PAGE UP
+  - PG UP
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -99,9 +98,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - VOL DN
-  - LEFT
-  - DOWN
-  - RIGHT
+  - LEFT GUI
+  - LEFT ALT
+  - LCTRL
+  - LEFT SHIFT
   - VOLUME UP
   - {t: ▽, type: trans}
   - RIGHT SHIFT
@@ -115,12 +115,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '3'}
-  - BT CLR
-  - '&sys_reset'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: NAV, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -141,8 +141,8 @@ layers:
   - {t: ▽, type: trans}
   - TAB
   - '1'
-  - {t: '2', h: LCTRL}
-  - '3'
+  - '2'
+  - {t: '3', h: LCTRL}
   - {t: '4', h: LEFT SHIFT}
   - '5'
   - '6'
