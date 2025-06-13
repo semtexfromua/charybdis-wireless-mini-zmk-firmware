@@ -88,9 +88,9 @@
     ib_arrow_nav: ib_arrow_nav {
         compatible = "zmk,input-behavior-move-to-keypress";
         #binding-cells = <0>;
-        threshold = <130>;
-        x-threshold = <100>;
-        y-threshold = <200>;
+        threshold = <250>;
+        x-threshold = < 200>;
+        y-threshold = <300>;
         rate-limit-ms = <15>;
         reset-other-axis;
         bindings = <&kp RIGHT>, <&kp LEFT>, <&kp UP>, <&kp DOWN>;
@@ -180,10 +180,14 @@
             keep-mods = <(MOD_RCTL)>;
         };
 
-        // Крок 1: нічого -> ЛКМ, CTRL -> CTRL+ЛКМ
-        // Крок 2: без ALT -> morph_ctrl, ALT -> ALT+ЛКМ  
-        // Крок 3: без SHIFT -> morph_alt, SHIFT -> ПКМ
-        // Крок 4: без WIN -> morph_shift, WIN -> ЦКМ
+        // Крок 1: нічого -> ЛКМ, CTRL -> CTRL+ЛКМ
+
+        // Крок 2: без ALT -> morph_ctrl, ALT -> ALT+ЛКМ  
+
+        // Крок 3: без SHIFT -> morph_alt, SHIFT -> ПКМ
+
+        // Крок 4: без WIN -> morph_shift, WIN -> ЦКМ
+
     };
 
     combos {
