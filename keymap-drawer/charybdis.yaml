@@ -71,8 +71,8 @@ layers:
   - $
   - '@'
   - '|'
-  - KP NUMLOCK
-  - PRINT SCREEN
+  - '#'
+  - ^
   - _
   - '{'
   - '}'
@@ -266,3 +266,5 @@ combos:
   k: Sft+Ctl+ ESCAPE
 - p: [14, 15, 40]
   k: Alt+Ctl+ DELETE
+- p: [37, 31, 32]
+  k: CAPS WORD
